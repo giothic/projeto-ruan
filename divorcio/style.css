@@ -24,7 +24,7 @@ img{
 }
 
 .container{
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 2%;
 }
@@ -59,7 +59,9 @@ header{
     width: 100%;
     height: 80vh;
     background-image: url('./assets/divórcio-1200x500.jpg');
-    background-attachment: fixed;
+    background-attachment: fixed
+    
+    ;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -230,4 +232,218 @@ main.wrapper ul li{
     font-size: 20px;
     text-align: center;
     margin: 30px 20px;
+}
+
+.differences{
+    width: 100%;
+    height: 65vh;
+    margin: 40px 0;
+}
+
+.differences h1{
+    text-align: center;
+    color: var(--blue);
+    font-weight: normal;
+    margin: 20px 0;
+
+}
+
+.differences > .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.differences .dif_single{
+    width: 300px;
+    height: 350px;
+    background-color: var(--blue);
+    border-radius: 10px;
+    text-align: center;
+    color: var(--white);
+    padding: 20px;
+}
+
+.differences .dif_single i{
+    font-size: 50px;
+}
+
+.differences .dif_single h3{
+    font-weight: normal;
+    margin: 20px 0;
+}
+
+.differences .dif_single p{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.faq{
+    width: 100%;
+    height: 60%;
+}
+
+.faq h1{
+    color: var(--blue);
+    font-weight: normal;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 30px;
+}
+
+.faq > .container{
+    background-color: #ccc;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.faq > .container > .single{
+    height: 50px;
+    padding: 10px 15px;
+    color: var(--blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.about_ruan{
+    width: 100%;
+    height: 70vh;
+    margin-top: 40px;
+}
+
+.about_ruan > .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about_ruan .left{
+    width: 50%;
+    text-align: center;
+    color: var(--blue);
+}
+
+.about_ruan .left p{
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.about_ruan .right{
+    width: 50%;
+    text-align: center;
+}
+
+.about_ruan .right img{
+    width: 350px;
+    height: 450px;
+    border-radius: 20px;
+}
+
+.contact{
+    width: 100%;
+    height: 70vh;
+    margin-top: 50px;
+}
+
+.contact > .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact .left{
+    width: 450px;
+    height: 450px;
+    background-color: #c5bddc;
+    border-radius: 20px;
+    padding: 20px 40px;
+    text-align: center;
+    color: var(--blue);
+}
+
+.contact .left .top h2{
+    font-weight: normal;
+}
+
+.contact .left .top p{
+    font-size: 13px;
+    margin: 20px 0;
+}
+
+.contact .left input{
+    width: 100%;
+    padding: 0 8px;
+    margin: 8px 0;
+    height: 30px;
+    background-color: #a7a9c8;
+    border: 0;
+    border-radius: 10px;
+}
+
+.contact .left textarea{
+    width: 100%;
+    height: 100px;
+    padding: 0 8px;
+    resize: none;
+    background-color: #a7a9c8;
+    border: 0;
+    border-radius: 10px;
+}
+
+.contact .left input[type=submit]{
+    width: 220px;
+    background-color: var(--blue);
+    color: var(--white);
+    border: 0;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.contact .right{
+    color: var(--blue);
+    font-weight: 300;
+}
+
+.contact .right p{
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+.contact .right p i{
+    margin-right: 10px;
+}
+
+.btn_box{
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.contact .right a{
+    padding: 5px;
+    background-color: var(--blue);
+    color: var(--white);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 10px;
+}
+
+footer{
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+footer img{
+    width: 200px;
 }
