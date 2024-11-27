@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,24 +13,27 @@
     --blue: #002e5c;
     --bg-gray: #d9d9d9;
     --white: #f1f1f1;
+    --light-pink: #c5bddc;
+    --sutil-dark-pink: #a7a9c8;
 }
 
-html,body{
+html,
+body {
     height: 100%;
     background-color: var(--bg-gray);
 }
 
-img{
+img {
     max-width: 100%;
 }
 
-.container{
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2%;
 }
 
-.btn-rep{
+.btn-rep {
     padding: 5px 10px;
     background-color: var(--blue);
     color: var(--white);
@@ -39,7 +43,7 @@ img{
     border-radius: 50px;
 }
 
-.whatsapp{
+.whatsapp {
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -55,41 +59,39 @@ img{
     cursor: pointer;
 }
 
-header{
+header {
     width: 100%;
     height: 80vh;
     background-image: url('./assets/divórcio-1200x500.jpg');
-    background-attachment: fixed
-    
-    ;
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 /*Overflow image*/
-header .overflow{
+header .overflow {
     width: 100%;
     height: 100%;
-    background: rgb(0,46,92);
-background: linear-gradient(0deg, rgba(0,46,92,1) 0%, rgba(0,46,92,0.09567577030812324) 100%, rgba(0,212,255,1) 100%);
+    background: rgb(0, 46, 92);
+    background: linear-gradient(0deg, rgba(0, 46, 92, 1) 0%, rgba(0, 46, 92, 0.09567577030812324) 100%, rgba(0, 212, 255, 1) 100%);
 }
 
-header .container{
+header .container {
     height: 100%;
 }
 
-header .container .top{
+header .container .top {
     width: 100%;
     height: 10%;
 }
 
-header .container .top img{
+header .container .top img {
     width: 250px;
     border-radius: 10px;
 }
 
-header .container .cta{
+header .container .cta {
     width: 100%;
     height: 90%;
     display: flex;
@@ -98,33 +100,33 @@ header .container .cta{
     justify-content: center;
 }
 
-header .container .cta h1{
+header .container .cta h1 {
     text-transform: uppercase;
     color: var(--blue);
     font-size: 50px;
     font-weight: normal;
 }
 
-header .container .cta p{
+header .container .cta p {
     color: var(--white);
     font-size: 30px;
 }
 
-nav{
+nav {
     width: 100%;
-    -webkit-box-shadow: -1px 1px 18px 0px rgba(0,0,0,0.75);
--moz-box-shadow: -1px 1px 18px 0px rgba(0,0,0,0.75);
-box-shadow: -1px 1px 18px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -1px 1px 18px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 1px 18px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 1px 18px 0px rgba(0, 0, 0, 0.75);
 }
 
-nav ul{
+nav ul {
     list-style-type: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-nav ul li{
+nav ul li {
     display: inline-block;
     text-align: center;
     width: 33.3%;
@@ -132,11 +134,11 @@ nav ul li{
 
 }
 
-nav ul li:nth-child(1){
+nav ul li:nth-child(1) {
     border-bottom: 5px solid var(--blue);
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     font-size: 30px;
     color: var(--blue);
@@ -144,52 +146,52 @@ nav ul li a{
     font-weight: 300;
 }
 
-section.about{
+section.about {
     width: 100%;
     height: 60vh;
 }
 
-section.about > .container{
+section.about>.container {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-section.about .left .right{
+section.about .left .right {
     width: 50%;
     height: 100%;
     color: var(--blue);
 }
 
-section.about .left img{
+section.about .left img {
     width: 350px;
     transform: scaleX(-1);
 }
 
-section.about .right{
+section.about .right {
     text-align: center;
     color: var(--blue);
 }
 
-section.about .right p{
+section.about .right p {
     max-width: 470px;
     font-size: 17px;
     text-align: center;
     margin: 20px 0;
 }
 
-section.specialization{
+section.specialization {
     width: 100%;
     height: 70vh;
     margin-top: 70px;
 }
 
-section.specialization .cta{
+section.specialization .cta {
     text-align: center;
 }
 
-section.specialization .description{
+section.specialization .description {
     color: var(--blue);
     text-align: center;
     display: flex;
@@ -198,32 +200,32 @@ section.specialization .description{
     justify-content: center;
 }
 
-section.specialization .description h1{
+section.specialization .description h1 {
     font-size: 30px;
     margin-bottom: 30px;
     text-transform: uppercase;
     font-weight: normal;
 }
 
-section.specialization .description p{
+section.specialization .description p {
     max-width: 700px;
     font-size: 18px;
     font-weight: 300;
 }
 
-main.wrapper{
+main.wrapper {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
-main.wrapper ul{
+main.wrapper ul {
     list-style-type: none;
     width: 50%;
 }
 
-main.wrapper ul li{
+main.wrapper ul li {
     text-transform: uppercase;
     border: 3px solid var(--blue);
     color: var(--blue);
@@ -234,13 +236,13 @@ main.wrapper ul li{
     margin: 30px 20px;
 }
 
-.differences{
+.differences {
     width: 100%;
     height: 65vh;
     margin: 40px 0;
 }
 
-.differences h1{
+.differences h1 {
     text-align: center;
     color: var(--blue);
     font-weight: normal;
@@ -248,13 +250,13 @@ main.wrapper ul li{
 
 }
 
-.differences > .container{
+.differences>.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.differences .dif_single{
+.differences .dif_single {
     width: 300px;
     height: 350px;
     background-color: var(--blue);
@@ -264,26 +266,26 @@ main.wrapper ul li{
     padding: 20px;
 }
 
-.differences .dif_single i{
+.differences .dif_single i {
     font-size: 50px;
 }
 
-.differences .dif_single h3{
+.differences .dif_single h3 {
     font-weight: normal;
     margin: 20px 0;
 }
 
-.differences .dif_single p{
+.differences .dif_single p {
     font-size: 16px;
     font-weight: 300;
 }
 
-.faq{
+.faq {
     width: 100%;
     height: 60%;
 }
 
-.faq h1{
+.faq h1 {
     color: var(--blue);
     font-weight: normal;
     text-align: center;
@@ -291,13 +293,13 @@ main.wrapper ul li{
     font-size: 30px;
 }
 
-.faq > .container{
+.faq>.container {
     background-color: #ccc;
     padding: 10px 20px;
     border-radius: 20px;
 }
 
-.faq > .container > .single{
+.faq>.container>.single {
     height: 50px;
     padding: 10px 15px;
     color: var(--blue);
@@ -309,92 +311,185 @@ main.wrapper ul li{
     margin: 20px 0;
 }
 
-.about_ruan{
+/* Carrousel */
+
+.depoiments {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1.depoiments-title{
+    font-size: 32px;
+    color: var(--blue);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center; 
+} 
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    width: 80%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimonial {
+    flex: 0 0 90%;
+    margin: 0 50px;
+    padding: 40px 20px;
+    background: var(--light-pink);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.person-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.testimonial-content {
+    flex: 1;
+}
+
+.testimonial-content h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.testimonial-content p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.stars {
+    text-align: center;
+    font-size: 30px;
+    color: var(--blue);
+}
+
+.arrow {
+    position: absolute;
+    background-color: transparent;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: var(--blue);
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+/**************/
+
+.about_ruan {
     width: 100%;
     height: 70vh;
     margin-top: 40px;
 }
 
-.about_ruan > .container{
+.about_ruan>.container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.about_ruan .left{
+.about_ruan .left {
     width: 50%;
     text-align: center;
     color: var(--blue);
 }
 
-.about_ruan .left p{
+.about_ruan .left p {
     max-width: 600px;
     margin-top: 20px;
 }
 
-.about_ruan .right{
+.about_ruan .right {
     width: 50%;
     text-align: center;
 }
 
-.about_ruan .right img{
+.about_ruan .right img {
     width: 350px;
     height: 450px;
     border-radius: 20px;
 }
 
-.contact{
+.contact {
     width: 100%;
     height: 70vh;
     margin-top: 50px;
 }
 
-.contact > .container{
+.contact>.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.contact .left{
+.contact .left {
     width: 450px;
     height: 450px;
-    background-color: #c5bddc;
+    background-color: var(--light-pink);
     border-radius: 20px;
     padding: 20px 40px;
     text-align: center;
     color: var(--blue);
 }
 
-.contact .left .top h2{
+.contact .left .top h2 {
     font-weight: normal;
 }
 
-.contact .left .top p{
+.contact .left .top p {
     font-size: 13px;
     margin: 20px 0;
 }
 
-.contact .left input{
+.contact .left input {
     width: 100%;
     padding: 0 8px;
     margin: 8px 0;
     height: 30px;
-    background-color: #a7a9c8;
+    background-color: var(--sutil-dark-pink);
     border: 0;
     border-radius: 10px;
 }
 
-.contact .left textarea{
+.contact .left textarea {
     width: 100%;
     height: 100px;
-    padding: 0 8px;
+    padding: 8px;
     resize: none;
-    background-color: #a7a9c8;
+    background-color: var(--sutil-dark-pink);
     border: 0;
     border-radius: 10px;
 }
 
-.contact .left input[type=submit]{
+.contact .left input[type=submit] {
     width: 220px;
     background-color: var(--blue);
     color: var(--white);
@@ -403,27 +498,28 @@ main.wrapper ul li{
     font-size: 17px;
     cursor: pointer;
 }
-.contact .right{
+
+.contact .right {
     color: var(--blue);
     font-weight: 300;
 }
 
-.contact .right p{
+.contact .right p {
     margin-top: 20px;
     font-size: 17px;
 }
 
-.contact .right p i{
+.contact .right p i {
     margin-right: 10px;
 }
 
-.btn_box{
+.btn_box {
     width: 100%;
     margin-top: 40px;
     text-align: center;
 }
 
-.contact .right a{
+.contact .right a {
     padding: 5px;
     background-color: var(--blue);
     color: var(--white);
@@ -433,7 +529,7 @@ main.wrapper ul li{
     border-radius: 10px;
 }
 
-footer{
+footer {
     width: 100%;
     padding: 10px 0;
     text-align: center;
@@ -444,6 +540,6 @@ footer{
     margin-top: 40px;
 }
 
-footer img{
+footer img {
     width: 200px;
 }
