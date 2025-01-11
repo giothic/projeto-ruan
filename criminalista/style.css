@@ -28,6 +28,11 @@ img {
     max-width: 100%;
 }
 
+iframe{
+    max-width: 100%;
+}
+
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -44,7 +49,7 @@ img {
     border-radius: 50px;
 }
 
-.whatsapp{
+.whatsapp {
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -59,38 +64,40 @@ img {
     font-size: 40px;
     cursor: pointer;
     z-index: 2;
-    animation: pulse 2s infinite; 
+    animation: pulse 2s infinite;
     margin-bottom: 30px;
     margin-right: 30px;
-  }
-  
-  
-  @keyframes pulse {
+}
+
+
+@keyframes pulse {
     0% {
-      transform: scale(1); 
+        transform: scale(1);
     }
+
     50% {
-      transform: scale(1.1); 
+        transform: scale(1.1);
     }
+
     100% {
-      transform: scale(1); 
+        transform: scale(1);
     }
-  }
+}
 
 .sample-header {
     position: relative;
     width: 100%;
     height: 100vh;
     background:
-    linear-gradient(0deg, rgb(148 28 29 / 50%) 0%, rgba(225, 163, 146, 0.07886904761904767) 66%),
-      url('./assets/criminalista-banner.png');
+        linear-gradient(0deg, rgb(148 28 29 / 50%) 0%, rgba(225, 163, 146, 0.07886904761904767) 66%),
+        url('./assets/criminalista-banner.png');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-  }
+}
 
-  .sample-header::before {
+.sample-header::before {
     content: "";
     position: absolute;
     top: 0;
@@ -99,32 +106,32 @@ img {
     left: 0;
     opacity: 0.3;
     z-index: 1;
-  }
-  
-  .sample-header-section {
+}
+
+.sample-header-section {
     padding: 5% 0;
     position: absolute;
-    top: 45%;  
-    left: 50%;  
-    transform: translate(-50%, -50%);  
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
     text-align: center;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-    z-index: 0; 
-    width: 90%;  
-  
-  }
+    z-index: 0;
+    width: 90%;
 
-  header p {
+}
+
+header p {
     color: rgba(255, 255, 255, 0.51);
     font-family: "Montserrat", sans-serif;
     font-size: 36px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-  }
+}
 
-  .sample-header-section h1 {
+.sample-header-section h1 {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
@@ -132,25 +139,25 @@ img {
     letter-spacing: 0.2rem;
     font-size: 80px;
     color: var(--blue);
-  }
+}
 
-  .sample-section-wrap {
+.sample-section-wrap {
     min-height: 100vh;
     margin-top: 20vh;
     background-color: var(--bg-gray);
     margin-bottom: 20vh;
-  }
-  
-  .sample-section {
+}
+
+.sample-section {
     max-width: 1140px;
     margin: auto;
     padding: 40px 20px;
-  
-  }
+
+}
 
 header .container {
     height: 100%;
-    
+
 }
 
 header .sample-header-section .top {
@@ -224,26 +231,29 @@ nav ul li a {
 
 section.about {
     width: 100%;
-    height: 80vh;
+    min-height: 80vh;
     background:
-    linear-gradient(0deg, #6d0b0b 0%, #6d0b0b 25%, #6d0b0b 50%, #6d0b0b 75%, #6d0b0b 100%),
-    var(--blue);
+        linear-gradient(0deg, #6d0b0b 0%, #6d0b0b 25%, #6d0b0b 50%, #6d0b0b 75%, #6d0b0b 100%),
+        var(--blue);
 }
 
 section.about>.container {
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     background:
-    linear-gradient(0deg, #6d0b0b 0%, #6d0b0b 25%, #6d0b0b 50%, #6d0b0b 75%, #6d0b0b 100%),
-    var(--blue);
+        linear-gradient(0deg, #6d0b0b 0%, #6d0b0b 25%, #6d0b0b 50%, #6d0b0b 75%, #6d0b0b 100%),
+        var(--blue);
+        text-align: center;
+        color: var(--light-purple);
 }
+
+section.about>.container h2{
+    padding: 10px 0;
+}
+
 
 section.about .left .right {
     width: 50%;
     height: 100%;
-    color: var(--light-purple);
 }
 
 section.about .left img {
@@ -265,10 +275,10 @@ section.about .right p {
 
 section.specialization {
     width: 100%;
-    height: 80vh;
+    min-height: 80vh;
     background:
-    linear-gradient(180deg, #6d0b0b 0%, #6d0b0b 25%, #6d0b0b 50%, #6d0b0b 75%, #6d0b0b 100%),
-    var(--blue);
+        linear-gradient(180deg, #6d0b0b 0%, #6d0b0b 25%, #6d0b0b 50%, #6d0b0b 75%, #6d0b0b 100%),
+        var(--blue);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -326,12 +336,13 @@ main.wrapper ul li {
 
 .differences {
     width: 100%;
-    height: 80vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     background:
-        var(--bg-gray); /* Cor de fundo se o gradiente não preencher tudo */
+        var(--bg-gray);
+    /* Cor de fundo se o gradiente não preencher tudo */
 }
 
 
@@ -362,8 +373,8 @@ main.wrapper ul li {
     margin: 20px;
 }
 
-.dif_single:hover{
-    transform: scale(1.1); 
+.dif_single:hover {
+    transform: scale(1.1);
 }
 
 
@@ -420,17 +431,17 @@ main.wrapper ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40vh;
+    min-height: 40vh;
     flex-direction: column;
 }
 
-h1.depoiments-title{
+h1.depoiments-title {
     font-size: 32px;
     color: var(--blue);
     text-transform: uppercase;
     margin-bottom: 20px;
-    text-align: center; 
-} 
+    text-align: center;
+}
 
 .carousel-container {
     position: relative;
@@ -510,12 +521,12 @@ h1.depoiments-title{
 
 .about_ruan {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     margin-top: 40px;
     background:
-    linear-gradient(0deg, #6d0b0b 0%, #6d0b0b 25%, #6d0b0b 50%, #6d0b0b 75%, #6d0b0b 100%),
-    linear-gradient(180deg, #6d0b0b 0%, #6d0b0b 25%, #6d0b0b 50%, #6d0b0b 75%, #6d0b0b 100%),    
-    var(--blue);
+        linear-gradient(0deg, #6d0b0b 0%, #6d0b0b 25%, #6d0b0b 50%, #6d0b0b 75%, #6d0b0b 100%),
+        linear-gradient(180deg, #6d0b0b 0%, #6d0b0b 25%, #6d0b0b 50%, #6d0b0b 75%, #6d0b0b 100%),
+        var(--blue);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -552,7 +563,7 @@ h1.depoiments-title{
 
 .contact {
     width: 100%;
-    height: 70vh;
+    min-height: 70vh;
     margin-top: 50px;
 }
 
@@ -571,8 +582,8 @@ h1.depoiments-title{
     text-align: center;
     margin: 50px;
     color: var(--blue);
-  text-align: center;
-  margin-top: -20px;
+    text-align: center;
+    margin-top: -20px;
 }
 
 .contact .left .top h2 {
@@ -641,12 +652,12 @@ h1.depoiments-title{
     width: 100%;
     margin-top: 40px;
     text-align: center;
-  }
-  
-  .btn_box i{
+}
+
+.btn_box i {
     margin-left: 20px;
     font-size: 25px;
-  }
+}
 
 .contact .right a {
     padding: 5px;
@@ -673,9 +684,74 @@ footer {
     color: var(--white);
     font-weight: 300;
     font-size: 14px;
-    margin-top: 40px;
+    margin-top: 55px;
 }
 
 footer img {
     width: 200px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    .sample-header-section h1 {
+        font-size: 40px;
+    }
+
+    .sample-header-section p {
+        font-size: 18px;
+    }
+
+    .about_ruan .container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about_ruan .right {
+        display: none;
+    }
+
+    .specialization {
+        padding: 20px;
+    }
+
+    .specialization .wrapper{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .specialization .wrapper ul{
+        width: 100%;
+    }
+
+    .contact>.container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact>.container .right{
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .differences .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .differences .container .dif_single{
+        margin-top: 20px;
+    }
+
 }

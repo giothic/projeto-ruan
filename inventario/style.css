@@ -27,6 +27,11 @@ img {
     max-width: 100%;
 }
 
+
+iframe{
+    max-width: 100%;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -35,8 +40,8 @@ img {
 
 .btn-rep {
     padding: 5px 10px;
-    background-color: var(--blue);
-    color: var(--white);
+    background-color: var(--bg-gray);
+    color: var(--blue);
     text-transform: uppercase;
     text-decoration: none;
     font-size: 20px;
@@ -148,43 +153,28 @@ nav ul li a {
 
 section.about {
     width: 100%;
-    height: 60vh;
+    min-height: 80vh;
+    background: var(--blue);
+
 }
 
-section.about>.container {
+section.about > .container {
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-section.about .left .right {
-    width: 50%;
-    height: 100%;
-    color: var(--blue);
-}
-
-section.about .left img {
-    width: 350px;
-    transform: scaleX(-1);
-}
-
-section.about .right {
+    width: 100% ;
+    color: var(--bg-gray);
     text-align: center;
-    color: var(--blue);
 }
 
-section.about .right p {
-    max-width: 470px;
-    font-size: 17px;
-    text-align: center;
-    margin: 20px 0;
+section.about>.container h2{
+    padding: 10px 0;
 }
+
 
 section.specialization {
     width: 100%;
-    height: 70vh;
-    margin-top: 70px;
+    min-height: 80vh;
+    padding-top: 50px;
+    background: var(--blue);
 }
 
 section.specialization .cta {
@@ -192,7 +182,8 @@ section.specialization .cta {
 }
 
 section.specialization .description {
-    color: var(--blue);
+    color: var(--bg-gray);
+
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -227,8 +218,8 @@ main.wrapper ul {
 
 main.wrapper ul li {
     text-transform: uppercase;
-    border: 3px solid var(--blue);
-    color: var(--blue);
+    border: 3px solid var(--bg-gray);
+    color: var(--bg-gray);
     border-radius: 10px;
     padding: 10px;
     font-size: 20px;
@@ -238,7 +229,7 @@ main.wrapper ul li {
 
 .differences {
     width: 100%;
-    height: 65vh;
+    min-height: 65vh;
     margin: 40px 0;
 }
 
@@ -406,8 +397,9 @@ h1.depoiments-title{
 
 .about_ruan {
     width: 100%;
-    height: 70vh;
+    min-height: 75vh;
     margin-top: 40px;
+    background-color: var(--blue);
 }
 
 .about_ruan>.container {
@@ -419,7 +411,9 @@ h1.depoiments-title{
 .about_ruan .left {
     width: 50%;
     text-align: center;
-    color: var(--blue);
+    color: var(--bg-gray);
+    padding: 10px;
+    font-size: 15px;
 }
 
 .about_ruan .left p {
@@ -433,14 +427,14 @@ h1.depoiments-title{
 }
 
 .about_ruan .right img {
-    width: 350px;
-    height: 450px;
+    width: 300px;
+    height: 350px;
     border-radius: 20px;
 }
 
 .contact {
     width: 100%;
-    height: 70vh;
+    min-height: 70vh;
     margin-top: 50px;
 }
 
@@ -542,4 +536,69 @@ footer {
 
 footer img {
     width: 200px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    .sample-header-section h1 {
+        font-size: 40px;
+    }
+
+    .sample-header-section p {
+        font-size: 18px;
+    }
+
+    .about_ruan .container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about_ruan .right {
+        display: none;
+    }
+
+    .specialization {
+        padding: 20px;
+    }
+
+    .specialization .wrapper{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .specialization .wrapper ul{
+        width: 100%;
+    }
+
+    .contact>.container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact>.container .right{
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .differences .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .differences .container .dif_single{
+        margin-top: 20px;
+    }
+
 }

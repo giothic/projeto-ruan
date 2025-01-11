@@ -19,11 +19,15 @@
 
 html,
 body {
-    height: 100%;
+    height: 100vh;
     background-color: var(--bg-gray);
 }
 
 img {
+    max-width: 100%;
+}
+
+iframe{
     max-width: 100%;
 }
 
@@ -59,44 +63,101 @@ img {
     cursor: pointer;
 }
 
-header {
+
+.sample-header {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background:
     linear-gradient(0deg, rgba(0, 46, 92, 0.697) 0%, rgba(0, 46, 92, 0.09567577030812324) 100%, rgba(0, 212, 255, 1) 100%),
-      url('./assets/divórcio-1200x500.jpg');
+
+        url('./assets/divórcio-1200x500.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-/*Overflow image*/
-header .overflow {
-    width: 100%;
-    height: 100%;
-    background: rgb(0, 46, 92);
-    background: linear-gradient(0deg, rgba(0, 46, 92, 1) 0%, rgba(0, 46, 92, 0.09567577030812324) 100%, rgba(0, 212, 255, 1) 100%);
+.sample-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.sample-header-section {
+    padding: 5% 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    width: 90%;
+
+}
+
+header p {
+    color: rgba(255, 255, 255, 0.51);
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.sample-header-section h1 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0.2rem;
+    font-size: 80px;
+    color: var(--blue);
+}
+
+.sample-section-wrap {
+    min-height: 100vh;
+    margin-top: 20vh;
+    background-color: var(--bg-gray);
+    margin-bottom: 20vh;
+}
+
+.sample-section {
+    max-width: 1140px;
+    margin: auto;
+    padding: 40px 20px;
+
 }
 
 header .container {
-    height: 100%;
+    min-height: 100vh;
+
 }
 
-header .container .top {
+header .sample-header-section .top {
     width: 100%;
     height: 10%;
+    top: -200px;
+    left: -45%;
+    z-index: 2;
+    position: relative;
 }
 
-header .container .top img {
+header .sample-header-section .top img {
     width: 250px;
     border-radius: 10px;
 }
 
 header .container .cta {
     width: 100%;
-    height: 90%;
+    min-height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -151,20 +212,25 @@ nav ul li a {
 
 section.about {
     width: 100%;
-    height: 60vh;
+    min-height: 80vh;
+    background-color: var(--blue);
+    color: var(--white);
 }
 
 section.about>.container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    min-height: 100vh;
+    text-align: center;
+}
+
+section.about>.container h2{
+    padding: 10px;
 }
 
 section.about .left .right {
     width: 50%;
-    height: 100%;
-    color: var(--blue);
+    min-height: 100vh;
+    color: var(--white);
+
 }
 
 section.about .left img {
@@ -174,7 +240,8 @@ section.about .left img {
 
 section.about .right {
     text-align: center;
-    color: var(--blue);
+    color: var(--white);
+
 }
 
 section.about .right p {
@@ -185,9 +252,10 @@ section.about .right p {
 }
 
 section.specialization {
+    background-color: var(--blue);
     width: 100%;
-    height: 70vh;
-    margin-top: 70px;
+    min-height: 80vh;
+    padding-top: 70px;
 }
 
 section.specialization .cta {
@@ -195,7 +263,7 @@ section.specialization .cta {
 }
 
 section.specialization .description {
-    color: var(--blue);
+    color: var(--white);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -230,8 +298,8 @@ main.wrapper ul {
 
 main.wrapper ul li {
     text-transform: uppercase;
-    border: 3px solid var(--blue);
-    color: var(--blue);
+    border: 3px solid var(--white);
+    color: var(--white);
     border-radius: 10px;
     padding: 10px;
     font-size: 20px;
@@ -241,7 +309,7 @@ main.wrapper ul li {
 
 .differences {
     width: 100%;
-    height: 65vh;
+    min-height: 65vh;
     margin: 40px 0;
 }
 
@@ -261,7 +329,7 @@ main.wrapper ul li {
 
 .differences .dif_single {
     width: 300px;
-    height: 350px;
+    min-height: 350px;
     background-color: var(--blue);
     border-radius: 10px;
     text-align: center;
@@ -285,7 +353,7 @@ main.wrapper ul li {
 
 .faq {
     width: 100%;
-    height: 60%;
+    min-height: 60%;
 }
 
 .faq h1 {
@@ -303,7 +371,7 @@ main.wrapper ul li {
 }
 
 .faq>.container>.single {
-    height: 50px;
+    min-height: 50px;
     padding: 10px 15px;
     color: var(--blue);
     display: flex;
@@ -356,7 +424,7 @@ h1.depoiments-title{
 
 .person-img {
     width: 60px;
-    height: 60px;
+    min-height: 60px;
     border-radius: 50%;
     margin-right: 15px;
 }
@@ -409,8 +477,10 @@ h1.depoiments-title{
 
 .about_ruan {
     width: 100%;
-    height: 70vh;
+    min-height: 70vh;
     margin-top: 40px;
+    background-color: var(--blue);
+    padding: 10px;
 }
 
 .about_ruan>.container {
@@ -422,12 +492,13 @@ h1.depoiments-title{
 .about_ruan .left {
     width: 50%;
     text-align: center;
-    color: var(--blue);
+    color: var(--white);
 }
 
 .about_ruan .left p {
     max-width: 600px;
-    margin-top: 20px;
+    margin-top: 10px;
+    font-size: 14px;
 }
 
 .about_ruan .right {
@@ -436,14 +507,14 @@ h1.depoiments-title{
 }
 
 .about_ruan .right img {
-    width: 350px;
-    height: 450px;
+    width: 300px;
+    height: 400px;
     border-radius: 20px;
 }
 
 .contact {
     width: 100%;
-    height: 70vh;
+    min-height: 70vh;
     margin-top: 50px;
 }
 
@@ -546,3 +617,71 @@ footer {
 footer img {
     width: 200px;
 }
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    .sample-header-section h1 {
+        font-size: 40px;
+    }
+
+    .sample-header-section p {
+        font-size: 18px;
+    }
+
+    .about_ruan .container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about_ruan .right {
+        display: none;
+    }
+
+    .specialization {
+        padding: 20px;
+    }
+
+    .specialization .wrapper{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .specialization .wrapper ul{
+        width: 100%;
+    }
+
+    .contact>.container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact>.container .right{
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .differences .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .differences .container .dif_single{
+        margin-top: 20px;
+    }
+
+}
+
+
+
