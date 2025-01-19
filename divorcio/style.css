@@ -152,6 +152,8 @@ header .sample-header-section .top {
 
 header .sample-header-section .top img {
     width: 250px;
+    height: 200px;
+    padding-top: 50px;
     border-radius: 10px;
 }
 
