@@ -30,6 +30,7 @@ img {
 
 iframe{
     max-width: 100%;
+    margin: 40px;
 }
 
 
@@ -132,7 +133,7 @@ header p {
 }
 
 header .top{
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .sample-header-section h1 {
@@ -174,8 +175,10 @@ header .sample-header-section .top {
 }
 
 header .sample-header-section .top img {
-    width: 250px;
+    width: 225px;
     border-radius: 10px;
+    height: 100px;
+    object-fit: cover;
 }
 
 header .container .cta {
@@ -251,7 +254,9 @@ section.about>.container {
 }
 
 section.about>.container h2{
-    padding: 10px 0;
+    padding: 35px 0 0 0;
+    font-weight: 400;
+    LETTER-SPACING: 0.2rem;
 }
 
 
@@ -367,7 +372,7 @@ main.wrapper ul li {
 
 .differences .dif_single {
     width: 300px;
-    height: 370px;
+    height: 430px;
     background-color: var(--blue);
     border-radius: 10px;
     text-align: center;
@@ -564,9 +569,11 @@ h1.depoiments-title {
 }
 
 .about_ruan .right img {
-    width: 350px;
+    width: 350px; 
     height: 450px;
+    object-fit: cover;
     border-radius: 20px;
+    object-position: center 20%; 
 }
 
 .contact {

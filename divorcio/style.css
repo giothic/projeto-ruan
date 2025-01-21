@@ -19,8 +19,9 @@
 
 html,
 body {
-    height: 100vh;
+    height: 100%;
     background-color: var(--bg-gray);
+    font-family: "Montserrat", sans-serif;
 }
 
 img {
@@ -29,7 +30,9 @@ img {
 
 iframe{
     max-width: 100%;
+    margin: 40px;
 }
+
 
 .container {
     max-width: 1200px;
@@ -39,8 +42,8 @@ iframe{
 
 .btn-rep {
     padding: 5px 10px;
-    background-color: var(--blue);
-    color: var(--white);
+    background-color: var(--light-pink);
+    color: var(--blue);
     text-transform: uppercase;
     text-decoration: none;
     font-size: 20px;
@@ -61,16 +64,33 @@ iframe{
     color: white;
     font-size: 40px;
     cursor: pointer;
+    z-index: 2;
+    animation: pulse 2s infinite;
+    margin-bottom: 30px;
+    margin-right: 30px;
 }
 
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
 
 .sample-header {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     background:
-    linear-gradient(0deg, rgba(0, 46, 92, 0.697) 0%, rgba(0, 46, 92, 0.09567577030812324) 100%, rgba(0, 212, 255, 1) 100%),
-
+        linear-gradient(0deg, #122a42 0%, rgba(225, 163, 146, 0.07886904761904767) 66%),
         url('./assets/divórcio-1200x500.jpg');
     background-attachment: fixed;
     background-position: center;
@@ -112,6 +132,10 @@ header p {
     line-height: normal;
 }
 
+header .top{
+    margin-top: 50px;
+}
+
 .sample-header-section h1 {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -137,7 +161,7 @@ header p {
 }
 
 header .container {
-    min-height: 100vh;
+    height: 100%;
 
 }
 
@@ -151,15 +175,15 @@ header .sample-header-section .top {
 }
 
 header .sample-header-section .top img {
-    width: 250px;
-    height: 200px;
-    padding-top: 50px;
+    width: 225px;
     border-radius: 10px;
+    height: 100px;
+    object-fit: cover;
 }
 
 header .container .cta {
     width: 100%;
-    min-height: 90%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -201,7 +225,7 @@ nav ul li {
 }
 
 nav ul li:nth-child(1) {
-    border-bottom: 5px solid var(--blue);
+    border-bottom: 5px solid var(--sutil-dark-pink);
 }
 
 nav ul li a {
@@ -215,24 +239,30 @@ nav ul li a {
 section.about {
     width: 100%;
     min-height: 80vh;
-    background-color: var(--blue);
-    color: var(--white);
+    background:
+        linear-gradient(0deg, #002041 0%, #002041 25%, #002041 50%, #002041 75%, #002041 100%),
+        var(--blue);
 }
 
 section.about>.container {
-    min-height: 100vh;
-    text-align: center;
+    height: 100%;
+    background:
+    linear-gradient(0deg, #002041 0%, #002041 25%, #002041 50%, #002041 75%, #002041 100%),
+        var(--blue);
+        text-align: center;
+        color: var(--light-purple);
 }
 
 section.about>.container h2{
-    padding: 10px;
+    padding: 35px 0 0 0;
+    font-weight: 400;
+    LETTER-SPACING: 0.2rem;
 }
+
 
 section.about .left .right {
     width: 50%;
-    min-height: 100vh;
-    color: var(--white);
-
+    height: 100%;
 }
 
 section.about .left img {
@@ -242,22 +272,25 @@ section.about .left img {
 
 section.about .right {
     text-align: center;
-    color: var(--white);
-
+    color: var(--light-pink);
 }
 
 section.about .right p {
     max-width: 470px;
     font-size: 17px;
-    text-align: center;
     margin: 20px 0;
+    text-align: justify;
 }
 
 section.specialization {
-    background-color: var(--blue);
     width: 100%;
     min-height: 80vh;
-    padding-top: 70px;
+    background:
+    linear-gradient(1800deg, #002041 0%, #002041 25%, #002041 50%, #002041 75%, #002041 100%),
+        var(--blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 section.specialization .cta {
@@ -265,7 +298,7 @@ section.specialization .cta {
 }
 
 section.specialization .description {
-    color: var(--white);
+    color: var(--light-pink);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -284,36 +317,44 @@ section.specialization .description p {
     max-width: 700px;
     font-size: 18px;
     font-weight: 300;
+
 }
 
 main.wrapper {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 main.wrapper ul {
     list-style-type: none;
-    width: 50%;
+    width: 35%;
 }
 
 main.wrapper ul li {
     text-transform: uppercase;
-    border: 3px solid var(--white);
-    color: var(--white);
+    border: 3px solid var(--light-pink);
+    color: var(--light-pink);
     border-radius: 10px;
     padding: 10px;
     font-size: 20px;
     text-align: center;
-    margin: 30px 20px;
+    margin: 30px 30px;
 }
 
 .differences {
     width: 100%;
-    min-height: 65vh;
-    margin: 40px 0;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background:
+        var(--bg-gray);
+    /* Cor de fundo se o gradiente não preencher tudo */
 }
+
+
 
 .differences h1 {
     text-align: center;
@@ -331,13 +372,20 @@ main.wrapper ul li {
 
 .differences .dif_single {
     width: 300px;
-    min-height: 350px;
+    height: 430px;
     background-color: var(--blue);
     border-radius: 10px;
     text-align: center;
     color: var(--white);
     padding: 20px;
+    transition: transform 1s ease, background-color 0.3s ease;
+    margin: 20px;
 }
+
+.dif_single:hover {
+    transform: scale(1.1);
+}
+
 
 .differences .dif_single i {
     font-size: 50px;
@@ -351,11 +399,13 @@ main.wrapper ul li {
 .differences .dif_single p {
     font-size: 16px;
     font-weight: 300;
+    text-align: justify;
 }
 
 .faq {
     width: 100%;
     min-height: 60%;
+    margin-bottom: 20px;
 }
 
 .faq h1 {
@@ -367,7 +417,7 @@ main.wrapper ul li {
 }
 
 .faq>.container {
-    background-color: #ccc;
+    background-color: var(--light-pink);
     padding: 10px 20px;
     border-radius: 20px;
 }
@@ -376,12 +426,15 @@ main.wrapper ul li {
     min-height: 50px;
     padding: 10px 15px;
     color: var(--blue);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--white);
+    background-color: var(--sutil-dark-pink);
     border-radius: 10px;
     margin: 20px 0;
+}
+
+.faq>.container>.single p{
+    margin-top: 10px;
+    border-top: 1px solid var(--blue);
+    padding: 10px;
 }
 
 /* Carrousel */
@@ -391,15 +444,17 @@ main.wrapper ul li {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 40vh;
+    flex-direction: column;
 }
 
-h1.depoiments-title{
+h1.depoiments-title {
     font-size: 32px;
     color: var(--blue);
     text-transform: uppercase;
     margin-bottom: 20px;
-    text-align: center; 
-} 
+    text-align: center;
+}
 
 .carousel-container {
     position: relative;
@@ -426,7 +481,7 @@ h1.depoiments-title{
 
 .person-img {
     width: 60px;
-    min-height: 60px;
+    height: 60px;
     border-radius: 50%;
     margin-right: 15px;
 }
@@ -479,10 +534,15 @@ h1.depoiments-title{
 
 .about_ruan {
     width: 100%;
-    min-height: 70vh;
+    min-height: 100vh;
     margin-top: 40px;
-    background-color: var(--blue);
-    padding: 10px;
+    background:
+    linear-gradient(0deg, #002041 0%, #002041 25%, #002041 50%, #002041 75%, #002041 100%),
+        linear-gradient(180deg, #002041 0%, #002041 25%, #002041 50%, #002041 75%, #002041 100%),
+        var(--blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .about_ruan>.container {
@@ -494,14 +554,20 @@ h1.depoiments-title{
 .about_ruan .left {
     width: 50%;
     text-align: center;
-    color: var(--white);
+    color: var(--light-pink);
 }
 
 .about_ruan .left p {
     max-width: 600px;
-    margin-top: 10px;
-    font-size: 14px;
+    margin-top: 20px;
+    text-align: justify;
 }
+
+.about_ruan .left h1{
+    text-align: center;
+    font-weight: 500;
+}
+
 
 .about_ruan .right {
     width: 50%;
@@ -509,9 +575,11 @@ h1.depoiments-title{
 }
 
 .about_ruan .right img {
-    width: 300px;
-    height: 400px;
+    width: 350px; 
+    height: 450px;
+    object-fit: cover;
     border-radius: 20px;
+    object-position: center 20%; 
 }
 
 .contact {
@@ -528,12 +596,15 @@ h1.depoiments-title{
 
 .contact .left {
     width: 450px;
-    height: 450px;
+    height: 525px;
     background-color: var(--light-pink);
     border-radius: 20px;
     padding: 20px 40px;
     text-align: center;
+    margin: 50px;
     color: var(--blue);
+    text-align: center;
+    margin-top: -20px;
 }
 
 .contact .left .top h2 {
@@ -550,6 +621,7 @@ h1.depoiments-title{
     padding: 0 8px;
     margin: 8px 0;
     height: 30px;
+    border-radius: 6px;
     background-color: var(--sutil-dark-pink);
     border: 0;
     border-radius: 10px;
@@ -558,7 +630,7 @@ h1.depoiments-title{
 .contact .left textarea {
     width: 100%;
     height: 100px;
-    padding: 8px;
+    padding: 0 8px;
     resize: none;
     background-color: var(--sutil-dark-pink);
     border: 0;
@@ -568,16 +640,24 @@ h1.depoiments-title{
 .contact .left input[type=submit] {
     width: 220px;
     background-color: var(--blue);
-    color: var(--white);
+    color: white;
     border: 0;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 17px;
     cursor: pointer;
+    font-weight: 600;
+    width: 330px;
+    height: 38px;
+    margin-left: 15px;
+    margin-top: 30px;
+    letter-spacing: 0.1rem;
 }
 
 .contact .right {
-    color: var(--blue);
     font-weight: 300;
+    margin: 3%;
+    padding: 10px;
+    color: var(--blue);
 }
 
 .contact .right p {
@@ -595,6 +675,11 @@ h1.depoiments-title{
     text-align: center;
 }
 
+.btn_box i {
+    margin-left: 20px;
+    font-size: 25px;
+}
+
 .contact .right a {
     padding: 5px;
     background-color: var(--blue);
@@ -603,6 +688,13 @@ h1.depoiments-title{
     text-decoration: none;
     font-size: 17px;
     border-radius: 10px;
+    font-weight: 500;
+    width: 330px;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 70px;
 }
 
 footer {
@@ -613,7 +705,7 @@ footer {
     color: var(--white);
     font-weight: 300;
     font-size: 14px;
-    margin-top: 40px;
+    margin-top: 55px;
 }
 
 footer img {
@@ -684,6 +776,3 @@ footer img {
     }
 
 }
-
-
-

@@ -9,11 +9,12 @@
 
 
 :root {
-    --light-purple: #c6bedd;
+    --light-purple: #ddcfbe;
     --blue: #312623;
     --bg-gray: #e8d6c2;
     --white: #f1f1f1;
-    --light-pink: #ccb8a1;
+    --light-pink: #CEA95C;
+    ;
     --sutil-dark-pink: #b1a08f;
 }
 
@@ -21,16 +22,18 @@ html,
 body {
     height: 100%;
     background-color: var(--bg-gray);
+    font-family: "Montserrat", sans-serif;
 }
 
 img {
     max-width: 100%;
 }
 
-
 iframe{
     max-width: 100%;
+    margin: 40px;
 }
+
 
 .container {
     max-width: 1200px;
@@ -40,7 +43,7 @@ iframe{
 
 .btn-rep {
     padding: 5px 10px;
-    background-color: var(--bg-gray);
+    background-color: var(--light-pink);
     color: var(--blue);
     text-transform: uppercase;
     text-decoration: none;
@@ -62,38 +65,121 @@ iframe{
     color: white;
     font-size: 40px;
     cursor: pointer;
+    z-index: 2;
+    animation: pulse 2s infinite;
+    margin-bottom: 30px;
+    margin-right: 30px;
 }
 
-header {
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.sample-header {
+    position: relative;
     width: 100%;
-    height: 80vh;
-    background-image: url('./assets/inventario-extrajudicial-o-que-e\ 1.png');
+    height: 100vh;
+    background:
+    linear-gradient(0deg, rgba(49,38,35,1) 0%, rgba(146,130,115,0.16850490196078427) 100%),
+    url('./assets/inventario-extrajudicial-o-que-e\ 1.png');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-/*Overflow image*/
-header .overflow {
-    width: 100%;
-    height: 100%;
-    background: rgb(49,38,35);
-background: linear-gradient(0deg, rgba(49,38,35,1) 0%, rgba(146,130,115,0.16850490196078427) 100%);
+.sample-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.sample-header-section {
+    padding: 5% 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    z-index: 0;
+    width: 90%;
+
+}
+
+header p {
+    color: rgba(255, 255, 255, 0.51);
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+header .top{
+    margin-top: 50px;
+}
+
+.sample-header-section h1 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0.2rem;
+    font-size: 80px;
+    color: #CEA95C;
+}
+
+.sample-section-wrap {
+    min-height: 100vh;
+    margin-top: 20vh;
+    background-color: var(--bg-gray);
+    margin-bottom: 20vh;
+}
+
+.sample-section {
+    max-width: 1140px;
+    margin: auto;
+    padding: 40px 20px;
+
 }
 
 header .container {
     height: 100%;
+
 }
 
-header .container .top {
+header .sample-header-section .top {
     width: 100%;
     height: 10%;
+    top: -200px;
+    left: -45%;
+    z-index: 2;
+    position: relative;
 }
 
-header .container .top img {
-    width: 250px;
+header .sample-header-section .top img {
+    width: 225px;
     border-radius: 10px;
+    height: 100px;
+    object-fit: cover;
 }
 
 header .container .cta {
@@ -140,7 +226,7 @@ nav ul li {
 }
 
 nav ul li:nth-child(1) {
-    border-bottom: 5px solid var(--blue);
+    border-bottom: 5px solid var(--sutil-dark-pink);
 }
 
 nav ul li a {
@@ -154,27 +240,58 @@ nav ul li a {
 section.about {
     width: 100%;
     min-height: 80vh;
-    background: var(--blue);
-
+    background:
+        linear-gradient(0deg, #1e1715 0%, #1e1715 25%, #1e1715 50%, #1e1715 75%, #1e1715 100%),
+        var(--blue);
 }
 
-section.about > .container {
+section.about>.container {
     height: 100%;
-    width: 100% ;
-    color: var(--bg-gray);
-    text-align: center;
+    background:
+    linear-gradient(0deg, #1e1715 0%, #1e1715 25%, #1e1715 50%, #1e1715 75%, #1e1715 100%),
+        var(--blue);
+        text-align: center;
+        color: var(--light-pink)
 }
 
 section.about>.container h2{
-    padding: 10px 0;
+    padding: 35px 0 0 0;
+    font-weight: 400;
+    LETTER-SPACING: 0.2rem;
 }
 
+
+section.about .left .right {
+    width: 50%;
+    height: 100%;
+}
+
+section.about .left img {
+    width: 350px;
+    transform: scaleX(-1);
+}
+
+section.about .right {
+    text-align: center;
+    color: var(--light-pink);
+}
+
+section.about .right p {
+    max-width: 470px;
+    font-size: 17px;
+    margin: 20px 0;
+    text-align: justify;
+}
 
 section.specialization {
     width: 100%;
     min-height: 80vh;
-    padding-top: 50px;
-    background: var(--blue);
+    background:
+    linear-gradient(180deg, #1e1715 0%, #1e1715 25%, #1e1715 50%, #1e1715 75%, #1e1715 100%),
+        var(--blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 section.specialization .cta {
@@ -182,8 +299,7 @@ section.specialization .cta {
 }
 
 section.specialization .description {
-    color: var(--bg-gray);
-
+    color: var(--light-pink);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -202,36 +318,44 @@ section.specialization .description p {
     max-width: 700px;
     font-size: 18px;
     font-weight: 300;
+
 }
 
 main.wrapper {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 main.wrapper ul {
     list-style-type: none;
-    width: 50%;
+    width: 35%;
 }
 
 main.wrapper ul li {
     text-transform: uppercase;
-    border: 3px solid var(--bg-gray);
-    color: var(--bg-gray);
+    border: 3px solid var(--light-pink);
+    color: var(--light-pink);
     border-radius: 10px;
     padding: 10px;
     font-size: 20px;
     text-align: center;
-    margin: 30px 20px;
+    margin: 30px 30px;
 }
 
 .differences {
     width: 100%;
-    min-height: 65vh;
-    margin: 40px 0;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background:
+        var(--bg-gray);
+    /* Cor de fundo se o gradiente não preencher tudo */
 }
+
+
 
 .differences h1 {
     text-align: center;
@@ -249,13 +373,20 @@ main.wrapper ul li {
 
 .differences .dif_single {
     width: 300px;
-    height: 370px;
+    height: 430px;
     background-color: var(--blue);
     border-radius: 10px;
     text-align: center;
     color: var(--white);
     padding: 20px;
+    transition: transform 1s ease, background-color 0.3s ease;
+    margin: 20px;
 }
+
+.dif_single:hover {
+    transform: scale(1.1);
+}
+
 
 .differences .dif_single i {
     font-size: 50px;
@@ -269,11 +400,13 @@ main.wrapper ul li {
 .differences .dif_single p {
     font-size: 16px;
     font-weight: 300;
+    text-align: justify;
 }
 
 .faq {
     width: 100%;
-    height: 60%;
+    min-height: 60%;
+    margin-bottom: 20px;
 }
 
 .faq h1 {
@@ -285,21 +418,24 @@ main.wrapper ul li {
 }
 
 .faq>.container {
-    background-color: var(--light-pink);
+    background-color: #ccb8a1;
     padding: 10px 20px;
     border-radius: 20px;
 }
 
 .faq>.container>.single {
-    height: 50px;
+    min-height: 50px;
     padding: 10px 15px;
     color: var(--blue);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: var(--sutil-dark-pink);
     border-radius: 10px;
     margin: 20px 0;
+}
+
+.faq>.container>.single p{
+    margin-top: 10px;
+    border-top: 1px solid var(--blue);
+    padding: 10px;
 }
 
 /* Carrousel */
@@ -309,15 +445,17 @@ main.wrapper ul li {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 40vh;
+    flex-direction: column;
 }
 
-h1.depoiments-title{
+h1.depoiments-title {
     font-size: 32px;
     color: var(--blue);
     text-transform: uppercase;
     margin-bottom: 20px;
-    text-align: center; 
-} 
+    text-align: center;
+}
 
 .carousel-container {
     position: relative;
@@ -335,7 +473,7 @@ h1.depoiments-title{
     flex: 0 0 90%;
     margin: 0 50px;
     padding: 40px 20px;
-    background: var(--light-pink);
+    background: #ccb8a1;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -397,9 +535,15 @@ h1.depoiments-title{
 
 .about_ruan {
     width: 100%;
-    min-height: 75vh;
+    min-height: 100vh;
     margin-top: 40px;
-    background-color: var(--blue);
+    background:
+    linear-gradient(0deg, #1e1715 0%, #1e1715 25%, #1e1715 50%, #1e1715 75%, #1e1715 100%),
+    linear-gradient(180deg, #1e1715 0%, #1e1715 25%, #1e1715 50%, #1e1715 75%, #1e1715 100%),
+        var(--blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .about_ruan>.container {
@@ -411,15 +555,20 @@ h1.depoiments-title{
 .about_ruan .left {
     width: 50%;
     text-align: center;
-    color: var(--bg-gray);
-    padding: 10px;
-    font-size: 15px;
+    color: var(--light-pink);
 }
 
 .about_ruan .left p {
     max-width: 600px;
     margin-top: 20px;
+    text-align: justify;
 }
+
+.about_ruan .left h1{
+    text-align: center;
+    font-weight: 500;
+}
+
 
 .about_ruan .right {
     width: 50%;
@@ -427,9 +576,11 @@ h1.depoiments-title{
 }
 
 .about_ruan .right img {
-    width: 300px;
-    height: 350px;
+    width: 350px; 
+    height: 450px;
+    object-fit: cover;
     border-radius: 20px;
+    object-position: center 20%; 
 }
 
 .contact {
@@ -446,12 +597,15 @@ h1.depoiments-title{
 
 .contact .left {
     width: 450px;
-    height: 450px;
-    background-color: var(--light-pink);
+    height: 525px;
+    background-color: #ccb8a1;
     border-radius: 20px;
     padding: 20px 40px;
     text-align: center;
+    margin: 50px;
     color: var(--blue);
+    text-align: center;
+    margin-top: -20px;
 }
 
 .contact .left .top h2 {
@@ -468,6 +622,7 @@ h1.depoiments-title{
     padding: 0 8px;
     margin: 8px 0;
     height: 30px;
+    border-radius: 6px;
     background-color: var(--sutil-dark-pink);
     border: 0;
     border-radius: 10px;
@@ -476,7 +631,7 @@ h1.depoiments-title{
 .contact .left textarea {
     width: 100%;
     height: 100px;
-    padding: 8px;
+    padding: 0 8px;
     resize: none;
     background-color: var(--sutil-dark-pink);
     border: 0;
@@ -486,16 +641,24 @@ h1.depoiments-title{
 .contact .left input[type=submit] {
     width: 220px;
     background-color: var(--blue);
-    color: var(--white);
+    color: white;
     border: 0;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 17px;
     cursor: pointer;
+    font-weight: 600;
+    width: 330px;
+    height: 38px;
+    margin-left: 15px;
+    margin-top: 30px;
+    letter-spacing: 0.1rem;
 }
 
 .contact .right {
-    color: var(--blue);
     font-weight: 300;
+    margin: 3%;
+    padding: 10px;
+    color: var(--blue);
 }
 
 .contact .right p {
@@ -513,6 +676,11 @@ h1.depoiments-title{
     text-align: center;
 }
 
+.btn_box i {
+    margin-left: 20px;
+    font-size: 25px;
+}
+
 .contact .right a {
     padding: 5px;
     background-color: var(--blue);
@@ -521,6 +689,13 @@ h1.depoiments-title{
     text-decoration: none;
     font-size: 17px;
     border-radius: 10px;
+    font-weight: 500;
+    width: 330px;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 70px;
 }
 
 footer {
@@ -531,7 +706,7 @@ footer {
     color: var(--white);
     font-weight: 300;
     font-size: 14px;
-    margin-top: 40px;
+    margin-top: 55px;
 }
 
 footer img {
